@@ -6,12 +6,14 @@
 - Reduce amounts of data to examine.
 - Help server to avoid sorting and temporary table.
 - Turn random I/O to sequential I/O.
+
 ### Types of Indexes:
 - B-Trees Index:
   - Not useful when you do not start lookup from the left node side.
   - Can't skip columns in the index.
   - Can't optimize access with any columns to the right of the first range condition. (Like is not useful with right columns)
 - Hash Index: The hash value of the record and index this value => only applies for equal conditions.
+
 ### Indexing Strategies for High Performance:
 - Isolating the column: should not be a part of an expression or be inside of a function.
   - Example of bad indexing:
@@ -39,5 +41,6 @@
          COUNT(*): 16049
     ```
     In this situation should choose customer_id to the left of your query.
+
 ### Clustered Indexes:
 - 
