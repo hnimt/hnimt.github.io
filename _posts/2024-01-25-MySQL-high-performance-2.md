@@ -52,4 +52,4 @@
 
 ### Redundant index:
 - Index 1 is customer_id and index 2 is (customer_id, order_id) => redundant index because of the same most left prefix. Index 2 covers index 1, but index 2 has more indexed columns => if you query only customer_id or insert and update is more expensive than index 1.
-- Index 1 is (customer_id, order_id) and index 2 is (order_id, customer_id) => not redundant index because of the different most left prefix.
+- Index 1 is (customer_id, order_id) and index 2 is (order_id, customer_id) => not redundant because of the different most left prefix.
