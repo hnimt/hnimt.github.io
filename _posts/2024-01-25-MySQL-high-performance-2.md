@@ -43,4 +43,5 @@
     In this situation should choose customer_id to the left of your query.
 
 ### Clustered Indexes:
-- 
+- One table only had a clustered index (primary key).
+- Primary key values are stored in the left node of B-tree => query by primary key is fastest. 
