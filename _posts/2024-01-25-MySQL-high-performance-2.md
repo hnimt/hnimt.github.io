@@ -44,4 +44,8 @@
 
 ### Clustered Indexes:
 - One table only had a clustered index (primary key).
-- Primary key values are stored in the left node of B-tree => query by primary key is fastest. 
+- Primary key values are stored in the left node of B-tree => query by primary key is fastest.
+
+### Using index scan for sorting:
+- Only be used when the index has the same directory with the order
+- Follow the leftmost prefix of the index
