@@ -56,3 +56,4 @@
 
 ### Indexes and Locking:
 - Indexes permit queries to lock fewer rows because indexes help to query fewer rows on a table.
+- 
