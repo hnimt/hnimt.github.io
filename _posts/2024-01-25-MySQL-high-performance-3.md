@@ -1,6 +1,6 @@
 # High-performance MySQL (Part 3)
 
-## Indexing for High Performance
+## Query Performance Optimization
 
 ### Indexing Basics
 - Reduce amounts of data to examine.
