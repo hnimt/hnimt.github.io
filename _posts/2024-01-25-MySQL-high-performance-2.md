@@ -55,4 +55,4 @@
 - Index 1 is (customer_id, order_id) and index 2 is (order_id, customer_id) => not redundant because of the different most left prefix.
 
 ### Indexes and Locking:
-- Indexes permit queries to lock fewer rows because indexes help to query fewer rows on table.
+- Indexes permit queries to lock fewer rows because indexes help to query fewer rows on a table.
