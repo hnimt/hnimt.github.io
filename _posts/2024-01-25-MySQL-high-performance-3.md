@@ -2,10 +2,21 @@
 
 ## Query Performance Optimization
 
-### Indexing Basics
-- Reduce amounts of data to examine.
-- Help server to avoid sorting and temporary table.
-- Turn random I/O to sequential I/O.
+### Chopping up a query:
+- Chopping up the big query to medium-size queries can improve performance considerably.
+- Example: Instead of running this big monolithic query:
+  ```
+  mysql> DELETE FROM messages WHERE created < DATE_SUB(NOW(),INTERVAL 3 MONTH);
+  ```
+  Should do something like pseudocode:
+  ```
+  rows_affected = 0
+  do {
+   rows_affected = do_query(
+   "DELETE FROM messages WHERE created < DATE_SUB(NOW(),INTERVAL 3 MONTH)
+   LIMIT 10000")
+  } while rows_affected > 0
+  ```
 
 ### Types of Indexes:
 - B-Trees Index:
